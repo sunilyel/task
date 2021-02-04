@@ -1,0 +1,22 @@
+{
+  "task": [
+    {
+      "title": "Breakfast",
+      "details": "Complete breakfast before 9am",
+      "status": "Completed",
+      "id": 1
+    },
+    {
+      "title": "Online Class",
+      "details": "Attend online class at 11am",
+      "status": "In-progress",
+      "id": 3
+    },
+    {
+      "title": "Lunch",
+      "details": "Have lunch on-time",
+      "status": "Open",
+      "id": 2
+    }
+  ]
+}

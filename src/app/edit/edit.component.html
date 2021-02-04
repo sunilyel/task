@@ -1,0 +1,25 @@
+<!-- <p>edit works!</p> -->
+<div class="container text-center mt-5">
+  <form action="#">
+    Edit Task Name <br /><input type="text" value="receiveData.title" #x1 />
+    <br />
+    <br />
+    Edit Description <br /><textarea
+      value="receiveData.details"
+      #x2
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+    ></textarea>
+    <br />
+    <br />
+    <select #x3 name="" id="">
+      <option value="Open">Open</option>
+      <option value="In-progress">In-progress</option>
+      <option value="Completed">Completed</option></select
+    ><br />
+    <br />
+    <button type="button" (click)="edit(x1, x2, x3)">Update</button>
+  </form>
+</div>

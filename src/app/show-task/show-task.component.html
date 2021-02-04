@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Task Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ans of taskOpen">
+        <th>{{ ans.id }}</th>
+        <td>{{ ans.title }}</td>
+        <td>{{ ans.details }}</td>
+        <td>{{ ans.status }}</td>
+        <td><a href="/delete/{{ ans.id }}">Delete</a></td>
+        <td><a href="/edit/{{ ans.id }}">Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

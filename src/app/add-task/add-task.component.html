@@ -1,0 +1,46 @@
+<div class="container text-center mt-5">
+  <form action="#" [formGroup]="addtask" (ngSubmit)="add_task()">
+    <p>
+      Name :
+      <input type="text" placeholder="Task Name" formControlName="title" />
+    </p>
+    <div
+      style="color: red"
+      *ngIf="
+        addtask.controls['title'].touched && !addtask.controls['title'].valid
+      "
+    >
+      <p>Task Name Cannot Be Blank</p>
+    </div>
+    <p>Description :</p>
+    <textarea
+      cols="30"
+      rows="10"
+      placeholder="Task Details"
+      formControlName="details"
+    ></textarea>
+    <div
+      style="color: red"
+      *ngIf="
+        addtask.controls['details'].touched &&
+        !addtask.controls['details'].valid
+      "
+    >
+      <p>Please Add Description</p>
+    </div>
+    <div class="container">
+      <div>Select Staus of Task</div>
+      <div>
+        <select formControlName="status" name="" id="">
+          <option value="Open">Open</option>
+          <option value="In-progress">In-progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <button type="submit" [disabled]="!addtask.valid">Add Task</button>
+    <br />
+    {{ msg }}
+  </form>
+</div>
