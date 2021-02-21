@@ -29,6 +29,7 @@ export class AddTaskComponent implements OnInit {
 
     this.my.postData('task', this.addtask.value).subscribe(
       (res) => {
+        console.log(res);
         this.msg = 'Task Added Successfully';
       },
       (error) => {

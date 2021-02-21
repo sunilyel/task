@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DeleteComponent } from './delete/delete.component';
 import { EditComponent } from './edit/edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { EditComponent } from './edit/edit.component';
     PagenotfoundComponent,
     DeleteComponent,
     EditComponent,
+    SampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,8 @@ import { EditComponent } from './edit/edit.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

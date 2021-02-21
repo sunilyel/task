@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,15 @@ export class TaskService {
     let finalLink = this.link + path;
     return this.http.get(finalLink);
   }
+
+  getTasks(): Observable<Array<Task>> {
+    return this.http.get<Array<Task>>(this.link + 'task');
+  }
+
+  updateTaskStatus(id, data) {
+    return this.editData('task', id, data);
+  }
+
   postData(path, data) {
     let finalLink = this.link + path;
     return this.http.post(finalLink, data);
@@ -27,4 +37,17 @@ export class TaskService {
     // console.log(finalLink);
     return this.http.put(finalLink, data);
   }
+}
+
+export interface Task {
+  title: string;
+  details: string;
+  status: TaskStatus;
+  id: number;
+}
+
+export enum TaskStatus {
+  completed = 'Completed',
+  inProgress = 'In-progress',
+  open = 'Open',
 }

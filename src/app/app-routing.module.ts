@@ -5,6 +5,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SampleComponent } from './sample/sample.component';
 import { ShowTaskComponent } from './show-task/show-task.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'showtask', component: ShowTaskComponent },
   { path: 'delete/:taskId', component: DeleteComponent },
   { path: 'edit/:taskId', component: EditComponent },
+  { path: 'sample', component: SampleComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 
